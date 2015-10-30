@@ -1,0 +1,7 @@
+-- Ignore all the ES5 generated files.
+src/**/*.js
+src/**/*.js.map
+
+.idea/**
+
+node_modules/**

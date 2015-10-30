@@ -1,0 +1,31 @@
+body {
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.main-container {
+	display: table-row;
+}
+
+.list-view,
+.detail-view {
+	display: table-cell;
+}
+
+.detail-view {
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	background-color: lightblue;
+}
+
+.item {
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	font-size: xx-small;
+	background-color: #cee3f8;
+}
+
+.options {
+	padding-top: 10px;
+}

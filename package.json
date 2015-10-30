@@ -1,0 +1,36 @@
+{
+  "name": "new-horizon",
+  "version": "1.0.0",
+  "description": "chapter one of angular 2 tutorial",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc -p src -w",
+    "start": "live-server --open=src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaknuces/angular-2-blog-new-horizon.git"
+  },
+  "keywords": [
+    "Angular",
+    "2",
+    "Hello",
+    "World",
+    "Beginner",
+    "Level"
+  ],
+  "author": "Owais Zahid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaknuces/angular-2-blog-new-horizon/issues"
+  },
+  "homepage": "https://github.com/zaknuces/angular-2-blog-new-horizon#readme",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.44",
+    "systemjs": "0.19.2"
+  },
+  "devDependencies": {
+    "live-server": "^0.8.2",
+    "typescript": "^1.6.2"
+  }
+}
