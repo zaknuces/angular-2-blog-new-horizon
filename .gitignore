@@ -5,3 +5,5 @@ src/**/*.js.map
 .idea/**
 
 node_modules/**
+
+*.log
