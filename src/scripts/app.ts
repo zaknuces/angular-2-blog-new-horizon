@@ -17,22 +17,8 @@
 import {
     Component,
     View,
-    NgFor,  // Forget ng-repeat, we not have ng-for :)
     bootstrap
 } from "angular2/angular2";
-
-// Import application specific classes and components
-import {
-    Product
-} from './models/Product';
-
-import {
-    CatalogItem
-} from './components/CatalogItem';
-
-import {
-    CatalogItemDetail
-} from './components/CatalogItemDetail';
 
 @Component({
     selector: 'my-app'  // Selector provides flexibility and the concept is similar to CSS selectors, XPath or JQuery selector. More on this in later tutorials.
@@ -40,36 +26,16 @@ import {
 
 // Use @View Annotation to indicate that the component has a view. Note: If we are using syntatic sugar then you can define template in the component annotation as well.
 @View({
-    // Unlike Angular 1, not every directive is available in the context. We need to declare the once we will be using in the template.
-    directives: [CatalogItem, CatalogItemDetail, NgFor],
     template: `
         <div class='main-container'>
-            <div class='list-view'>
-                <catalog-item *ng-for="#product of products" [product]="product">
-                </catalog-item>
-            </div>
-            <div class='detail-view'>
-                <catalog-item-detail [product]="selectedItem"></catalog-item-detail>
-            </div>
+            This is the beginning!
         </div>
     `
 })
 
 // Class will provide the meaning to the component. The properties of the class can be used in the template. Class will be
 // used to interact with other components and services.
-class AppComponent {
-    products: Array<Products>;
-    selectedItem: Product;
-
-    constructor() {
-        this.products = [
-            new Product(new Date('10 Nov, 2013'), 'Brake', 'Car Hydrolics Brake', 'good safely record', '1000'),
-            new Product(new Date('10 Jun, 2014'), 'Chassis', 'Mclaren Chassis', 'strong support', '2010')
-        ]
-
-        this.selectedItem = this.products[0];
-    }
-}
+class AppComponent {}
 
 // Use this function to Bootstrap or Loading a new component at the root level of the application.
 bootstrap(AppComponent);
