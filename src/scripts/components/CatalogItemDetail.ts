@@ -11,12 +11,12 @@ import {
 
 import {
     Product
-} from './models/Product';
+} from '../models/Product';
 
 @Component({
     selector: 'catalog-item-detail',
     // Having properties allows component to receive properties from DOM. Similar to Angular 1 directive scope variables.
-    properties: ['product']
+    inputs: ['product']
 })
 
 @View({

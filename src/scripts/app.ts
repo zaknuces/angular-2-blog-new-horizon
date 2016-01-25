@@ -45,12 +45,15 @@ import {
     template: `
         <div class='main-container'>
             <div class='list-view'>
-                <catalog-item *ng-for="#product of products" [product]="product">
+                <catalog-item *ng-for="#product of products" [product]="product" (click)="productClicked($event)">
                 </catalog-item>
             </div>
             <div class='detail-view'>
                 <catalog-item-detail [product]="selectedItem"></catalog-item-detail>
             </div>
+        </div>
+        <div>
+            <button (click)="newProduct()">Create New</button>
         </div>
     `
 })
@@ -58,7 +61,7 @@ import {
 // Class will provide the meaning to the component. The properties of the class can be used in the template. Class will be
 // used to interact with other components and services.
 class AppComponent {
-    products: Array<Products>;
+    products: Array<Product>;
     selectedItem: Product;
 
     constructor() {
@@ -68,6 +71,14 @@ class AppComponent {
         ]
 
         this.selectedItem = this.products[0];
+    }
+
+    productClicked(product) {
+        this.selectedItem = product;
+    }
+
+    newProduct() {
+        this.products.push(this.selectedItem = new Product(new Date('10 Jun, 2014'), 'Feul Injector', 'Delphi FI', 'Multi-Port Fuel', '2010'))
     }
 }
 
