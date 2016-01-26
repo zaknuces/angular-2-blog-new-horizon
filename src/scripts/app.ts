@@ -1,6 +1,7 @@
 /**
  * The main entry point to our angular application. Important things to note:
  * 1: Angular 2 is based on the idea of Components. Components are the new versions of Directives.
+ *    (Directives also exists, more on it later.)
  * 2: Component has three parts:
  *      1: A Component Annotation (Annotation is a way of adding metadata to the code).
  *      2: A View Annotation
@@ -8,11 +9,15 @@
  *
  * Created by owais zahid <owais.zahid@autodesk.com> on 10/30/2015.
  *
- * This application is mainly based on
- * - angular 5 mins quick start <@link https://angular.io/docs/ts/latest/quickstart.html>
+ * This is a simple catalog management system. The main purpose to show how an application
+ * can be developed using Angular component model.
  *
  * Other references and inspirations:
- * Angular Documentation and Code.
+ * Victor Savkin's The Core Concepts of Angular 2 {@link http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2}
+ * Angular 2 documentation and Google group
+ * draft ng-book2 by Ari Lerner, Felipe Coury, Nate Murray and Carlos Taborda
+ *
+ * Note: I am using annotations in a limited fashion to keep things simple.
  */
 import {
     Component,

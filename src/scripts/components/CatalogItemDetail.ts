@@ -15,7 +15,7 @@ import {
 
 @Component({
     selector: 'catalog-item-detail',
-    // Having properties allows component to receive properties from DOM. Similar to Angular 1 directive scope variables.
+    // Use inputs property to send data to the component.
     inputs: ['product']
 })
 
