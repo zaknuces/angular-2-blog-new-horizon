@@ -5,9 +5,12 @@
  */
 import {
     Component,
-    View,
-    FORM_DIRECTIVES // A list of all the form directives used as part of a @View annotation.
-} from "angular2/angular2";
+    View
+} from "angular2/core";
+
+import {
+  FORM_DIRECTIVES // A list of all the form directives used as part of a @View annotation.
+} from 'angular2/common'
 
 import {
     Product
@@ -25,15 +28,15 @@ import {
         <div class="item-details">
             <div class="field">
                 <label>Name:</label>
-                <input type="text" [(ng-model)]="product.name">
+                <input type="text" [(ngModel)]="product.name">
             </div>
             <div class="field">
                 <label>Description:</label>
-                <input type="text" [(ng-model)]="product.description">
+                <input type="text" [(ngModel)]="product.description">
             </div>
             <div class="field">
                 <label>Name:</label>
-                <input type="text" [(ng-model)]="product.serialNumber">
+                <input type="text" [(ngModel)]="product.serialNumber">
             </div>
         </div>
     `

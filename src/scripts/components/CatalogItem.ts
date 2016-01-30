@@ -7,7 +7,7 @@ import {
     Component,
     View,
     EventEmitter
-} from "angular2/angular2";
+} from "angular2/core";
 
 import {
     Product
@@ -32,7 +32,7 @@ import {
 
 export class CatalogItem {
     product: Product;
-    click: EventEmitter;
+    click: EventEmitter<any>;
 
     constructor() {
         this.click = new EventEmitter();

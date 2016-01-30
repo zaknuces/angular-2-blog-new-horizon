@@ -21,10 +21,16 @@
  */
 import {
     Component,
-    View,
-    NgFor,  // Forget ng-repeat, we not have ng-for :)
-    bootstrap
-} from "angular2/angular2";
+    View
+} from "angular2/core";
+
+import {
+  NgFor  // Forget ng-repeat, we not have ng-for :)
+} from 'angular2/common'
+
+import {
+  bootstrap
+} from 'angular2/platform/browser'
 
 // Import application specific classes and components
 import {
@@ -39,6 +45,11 @@ import {
     CatalogItemDetail
 } from './components/CatalogItemDetail';
 
+import {
+    CatalogOptions
+} from './components/CatalogOptions';
+
+
 @Component({
     selector: 'my-app'  // Selector provides flexibility and the concept is similar to CSS selectors, XPath or JQuery selector. More on this in later tutorials.
 })
@@ -46,11 +57,11 @@ import {
 // Use @View Annotation to indicate that the component has a view. Note: If we are using syntatic sugar then you can define template in the component annotation as well.
 @View({
     // Unlike Angular 1, not every directive is available in the context. We need to declare the once we will be using in the template.
-    directives: [CatalogItem, CatalogItemDetail, NgFor],
+    directives: [CatalogItem, CatalogItemDetail, CatalogOptions, NgFor],
     template: `
         <div class='main-container'>
             <div class='list-view'>
-                <catalog-item *ng-for="#product of products" [product]="product" (click)="productClicked($event)">
+                <catalog-item *ngFor="#product of products" [product]="product" (click)="productClicked($event)">
                 </catalog-item>
             </div>
             <div class='detail-view'>
@@ -58,7 +69,7 @@ import {
             </div>
         </div>
         <div>
-            <button (click)="newProduct()">Create New</button>
+            <catalog-options (newCatalogItem)="newProduct()"></catalog-options>
         </div>
     `
 })
